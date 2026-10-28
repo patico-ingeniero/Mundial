@@ -1,0 +1,383 @@
+/*VARIABLES GLOBALES Y AJUSTES BASE*/
+:root {
+  --color-primary: #f0484a;
+  --color-primary-dark: #d13d3f;
+  --color-text: #ffffff;
+  --color-text-dark: #333333;
+  --color-text-muted: #d1d1d1;
+  --color-text-soft: #6c757d;
+  --bg-light: #f8f9fa;
+  --bg-dark: #1c1c1e;
+  --font-logo: 'Bebas Neue', sans-serif;
+  --font-main: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  color: var(--color-text-dark);
+}
+
+/*BLOQUE: HEADER*/
+.header {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.header__logo {
+  font-family: var(--font-logo);
+  font-size: 2.2rem;
+  color: #fff !important;
+  letter-spacing: 2px;
+}
+
+.header__logo sup {
+  font-size: 0.8rem;
+}
+
+.header__nav {
+  gap: 2rem;
+}
+
+.header__link {
+  color: var(--color-text-muted) !important;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.5rem 0 !important;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.header__link:hover,
+.header__link--active {
+  color: #fff !important;
+  border-bottom-color: #fff;
+}
+
+/*BLOQUE: HERO*/
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+  background-image: url('imagenfondo.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero__title {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero__text {
+  font-weight: 400;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/*BLOQUE: COUNTDOWN*/
+.countdown {
+  max-width: 400px;
+}
+
+.countdown__item {
+  text-align: center;
+}
+
+.countdown__number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.countdown__label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: lowercase;
+  color: var(--color-text-muted);
+  margin-top: 5px;
+}
+
+/*BLOQUE: BUTTON*/
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: 1px solid var(--color-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--color-primary-dark);
+  color: #fff;
+}
+
+.button--light {
+  background-color: #fff;
+  color: var(--color-text-dark);
+  border: 1px solid #fff;
+}
+
+.button--light:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.button--link {
+  background-color: transparent;
+  color: #fff;
+  margin-left: 20px;
+  padding: 12px 0;
+}
+
+.button--link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/*BLOQUE: SECTION*/
+.section {
+  padding-top: 80px;
+}
+
+.section--light {
+  background-color: var(--bg-light);
+}
+
+.section--dark {
+  background-color: var(--bg-dark);
+  color: #fff;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: inherit;
+}
+
+.section__text {
+  line-height: 1.7;
+}
+
+/*BLOQUE: PRICING (boletos)*/
+.pricing {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.pricing:hover {
+  transform: translateY(-5px);
+}
+
+.pricing--featured {
+  background-color: var(--color-primary);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.pricing--featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.pricing__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.pricing__price {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.pricing--featured .pricing__price {
+  color: #fff;
+}
+
+.pricing__features li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/*BLOQUE: MATCH (partidos)*/
+.match {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.match__team {
+  width: 30%;
+  font-weight: 700;
+}
+
+.match__info {
+  width: 40%;
+  color: var(--color-text-soft);
+}
+
+/*BLOQUE: PLAYER (jugadores)*/
+.player__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  font-family: var(--font-logo);
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: var(--color-text-soft);
+}
+
+.player__avatar--france {
+  background: linear-gradient(135deg, #0055a4, #ef4135);
+}
+
+.player__avatar--norway {
+  background: linear-gradient(135deg, #ba0c2f, #00205b);
+}
+
+.player__avatar--brazil {
+  background: linear-gradient(135deg, #009c3b, #ffdf00);
+  color: #002776;
+}
+
+.player__avatar--england {
+  background: linear-gradient(135deg, #ffffff, #cf142b);
+  color: #1d1d1d;
+  border: 1px solid #ddd;
+}
+
+.player__name {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.player__role {
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+}
+
+/*BLOQUE: BLOG-CARD*/
+.blog-card__tag {
+  background-color: var(--color-primary);
+}
+
+.blog-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.blog-card__text {
+  color: var(--color-text-soft);
+}
+
+.blog-card__link {
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.blog-card__link:hover {
+  color: var(--color-primary-dark);
+}
+
+/*BLOQUES: CONTACT-FORM Y FOOTER*/
+.contact-form__success {
+  color: #7ddc8a;
+}
+
+.footer {
+  background-color: var(--bg-dark);
+  border-top: 1px solid #333;
+}
+
+.footer__text {
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+}
+
+/*RESPONSIVE*/
+@media (max-width: 991px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .header {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .header__nav {
+    gap: 0.5rem;
+    padding-top: 1rem;
+    text-align: right;
+  }
+
+  .pricing--featured,
+  .pricing--featured:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    background-attachment: scroll;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .countdown__number {
+    font-size: 1.8rem;
+  }
+
+  .match__team {
+    font-size: 0.85rem;
+  }
+}
+
+/*AJUSTE DE IMAGEN DEL ESTADIO (BEM)*/
+.about__image {
+  max-width: 450px; /* Cambia este valor (ej: 350px, 500px) al tamaño que prefieras */
+  height: auto;     /* Mantiene la proporción original para que no se deforme */
+}

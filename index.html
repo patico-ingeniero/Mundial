@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="JMAL">
+  <meta name="description" content="Página del Mundial 2030: cuenta regresiva, venta de boletos, partidos inaugurales, jugadores estrella y noticias.">
+  <meta name="keywords" content="fútbol, copa mundial, mundial 2030, boletos, partidos, jugadores, Mbappé, Haaland, Vinícius, Bellingham">
+  <title>Soccer - Copa del Mundo 2030</title>
+
+  <!-- Bootstrap (grillas y navbar) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Bloque Header (fijo arriba) -->
+  <header class="header fixed-top w-100 py-3">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0">
+        <a class="navbar-brand header__logo" href="#inicio">SOCCER<sup>™</sup></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav header__nav">
+            <li class="nav-item">
+              <a class="nav-link header__link header__link--active" href="#inicio">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link header__link" href="#partidos">PARTIDOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link header__link" href="#jugadores">JUGADORES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link header__link" href="#blog">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link header__link" href="#contacto">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Bloque Hero (Inicio) -->
+  <div id="inicio" class="hero">
+    <main class="container position-relative z-1 d-flex flex-column justify-content-center flex-grow-1">
+      <div class="row mt-5 pt-5">
+        <div class="col-12 col-md-8 offset-md-4 col-lg-5 offset-lg-6">
+
+          <h1 class="hero__title">Copa del<br>Mundo 2030</h1>
+          <p class="hero__text">El Mundial del Centenario arranca en Sudamérica y sigue en España, Portugal y Marruecos. Asegura tu lugar en la fiesta del fútbol.</p>
+
+          <!-- Bloque Countdown -->
+          <div class="countdown hero__countdown d-flex justify-content-between my-5">
+            <div class="countdown__item">
+              <span class="countdown__number" id="weeks">000</span>
+              <span class="countdown__label">semanas</span>
+            </div>
+            <div class="countdown__item">
+              <span class="countdown__number" id="days">00</span>
+              <span class="countdown__label">días</span>
+            </div>
+            <div class="countdown__item">
+              <span class="countdown__number" id="hours">00</span>
+              <span class="countdown__label">h</span>
+            </div>
+            <div class="countdown__item">
+              <span class="countdown__number" id="minutes">00</span>
+              <span class="countdown__label">min</span>
+            </div>
+            <div class="countdown__item">
+              <span class="countdown__number" id="seconds">00</span>
+              <span class="countdown__label">seg</span>
+            </div>
+          </div>
+
+          <!-- Botones -->
+          <div class="hero__actions d-flex align-items-center">
+            <a href="#boletos" class="button button--primary">COMPRAR BOLETOS</a>
+            <a href="#evento" class="button button--link">SABER MÁS</a>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- SECCIÓN: SABER MÁS -->
+  <section id="evento" class="section section--light py-5">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <h2 class="section__title">Sobre el evento</h2>
+          <p class="section__text">El Mundial 2030 celebra los 100 años de la primera Copa del Mundo. Por primera vez el torneo se jugará en tres continentes: los partidos inaugurales serán en Uruguay, Argentina y Paraguay, y el resto de la competición se disputará en España, Portugal y Marruecos.</p>
+        </div>
+        <div class="col-md-6 text-center">
+<img src="C:\Users\marti\OneDrive\Escritorio\corte 2\estadio.jpg" alt="Estadio de fútbol" class="img-fluid rounded shadow w-75">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: BOLETOS -->
+  <section id="boletos" class="section py-5">
+    <div class="container py-5">
+      <h2 class="section__title text-center mb-5">Elige tu boleto</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="pricing">
+            <h3 class="pricing__title">Estándar</h3>
+            <p class="pricing__price">$150</p>
+            <ul class="pricing__features list-unstyled">
+              <li>Asiento categoría 3</li>
+              <li>Entrada general</li>
+              <li>Sin zona de hospitalidad</li>
+            </ul>
+            <a href="#contacto" class="button button--primary w-100 mt-3">Comprar</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pricing pricing--featured">
+            <h3 class="pricing__title">Premium</h3>
+            <p class="pricing__price">$450</p>
+            <ul class="pricing__features list-unstyled">
+              <li>Asiento categoría 1</li>
+              <li>Entrada exclusiva</li>
+              <li>Acceso a sala lounge</li>
+            </ul>
+            <a href="#contacto" class="button button--light w-100 mt-3">Comprar</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pricing">
+            <h3 class="pricing__title">Palco VIP</h3>
+            <p class="pricing__price">$1.200</p>
+            <ul class="pricing__features list-unstyled">
+              <li>Palco privado</li>
+              <li>Entrada VIP</li>
+              <li>Catering y bar incluidos</li>
+            </ul>
+            <a href="#contacto" class="button button--primary w-100 mt-3">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: PARTIDOS -->
+  <section id="partidos" class="section section--light py-5">
+    <div class="container py-5">
+      <h2 class="section__title text-center mb-5">Partidos inaugurales</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="match d-flex justify-content-between align-items-center p-4 mb-3">
+            <div class="match__team text-end">URUGUAY</div>
+            <div class="match__info text-center">vs<br><small>8–9 jun 2030 · Montevideo</small></div>
+            <div class="match__team text-start">POR DEFINIR</div>
+          </div>
+          <div class="match d-flex justify-content-between align-items-center p-4 mb-3">
+            <div class="match__team text-end">ARGENTINA</div>
+            <div class="match__info text-center">vs<br><small>8–9 jun 2030 · Buenos Aires</small></div>
+            <div class="match__team text-start">POR DEFINIR</div>
+          </div>
+          <div class="match d-flex justify-content-between align-items-center p-4">
+            <div class="match__team text-end">PARAGUAY</div>
+            <div class="match__info text-center">vs<br><small>8–9 jun 2030 · Asunción</small></div>
+            <div class="match__team text-start">POR DEFINIR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: JUGADORES -->
+  <section id="jugadores" class="section py-5">
+    <div class="container py-5">
+      <h2 class="section__title text-center mb-5">Jugadores estrella</h2>
+      <div class="row g-4">
+        <div class="col-6 col-md-3 text-center">
+          <div class="player">
+            <div class="player__avatar player__avatar--france">KM</div>
+            <h3 class="player__name">Kylian Mbappé</h3>
+            <p class="player__role">Delantero · Francia</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <div class="player">
+            <div class="player__avatar player__avatar--norway">EH</div>
+            <h3 class="player__name">Erling Haaland</h3>
+            <p class="player__role">Delantero centro · Noruega</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <div class="player">
+            <div class="player__avatar player__avatar--brazil">VJ</div>
+            <h3 class="player__name">Vinícius Júnior</h3>
+            <p class="player__role">Extremo · Brasil</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <div class="player">
+            <div class="player__avatar player__avatar--england">JB</div>
+            <h3 class="player__name">Jude Bellingham</h3>
+            <p class="player__role">Centrocampista · Inglaterra</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: BLOG -->
+  <section id="blog" class="section section--light py-5">
+    <div class="container py-5">
+      <h2 class="section__title text-center mb-5">Últimas noticias</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <article class="blog-card card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <span class="blog-card__tag badge mb-2">Sedes</span>
+              <h3 class="blog-card__title card-title">Un Mundial en tres continentes</h3>
+              <p class="blog-card__text card-text">Sudamérica, Europa y África compartirán por primera vez una Copa del Mundo...</p>
+              <a href="#" class="blog-card__link">Leer más ➔</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="blog-card card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <span class="blog-card__tag badge mb-2">Historia</span>
+              <h3 class="blog-card__title card-title">100 años del primer Mundial</h3>
+              <p class="blog-card__text card-text">El Estadio Centenario de Montevideo vuelve a ser protagonista un siglo después...</p>
+              <a href="#" class="blog-card__link">Leer más ➔</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="blog-card card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <span class="blog-card__tag badge mb-2">Aficionados</span>
+              <h3 class="blog-card__title card-title">Zonas para hinchas</h3>
+              <p class="blog-card__text card-text">Descubre dónde celebrar con otros aficionados en cada ciudad sede...</p>
+              <a href="#" class="blog-card__link">Leer más ➔</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: CONTACTO -->
+  <section id="contacto" class="section section--dark py-5">
+    <div class="container py-5">
+      <h2 class="section__title text-center mb-5">Contáctanos</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <form class="contact-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="name" placeholder="Juan Pérez" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="button button--primary w-100 border-0">Enviar mensaje</button>
+            <p class="contact-form__success mt-3 text-center" id="formSuccess" hidden>¡Gracias! Tu mensaje fue enviado.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer text-center py-4">
+    <div class="container">
+      <p class="footer__text mb-0">&copy; 2026 SOCCER™ Copa del Mundo 2030. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script propio -->
+  <script src="script.js"></script>
+</body>
+</html>
